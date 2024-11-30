@@ -1,0 +1,153 @@
+
+Day 1: Project Setup and Basic Configuration(completed)
+
+- Step 1: Set Up Project Structure
+- Create NestJS Project: Initialize a new NestJS project using Fastify.
+- Configure MongoDB: Set up MongoDB and connect it to your NestJS application using Mongoose or TypeORM.
+
+- Step 2: Basic Configuration
+- Install Dependencies: Install essential packages such as `@nestjs/core`, `@nestjs/common`, `@nestjs/mongoose`, and `fastify`.
+- Set Up TypeScript: Ensure TypeScript is configured correctly.
+- Initialize Git Repository: Set up a Git repository and make the initial commit.
+
+- Step 3: Environment Variables
+- Configure Environment Variables: Set up environment variables for different stages (development, staging, production).
+
+- Step 4: Documentation
+- Start Documentation: Begin documenting the project setup and basic configuration steps.
+
+Day 2: NGINX Setup (completed)
+
+- Step 1: Install NGINX
+- Install NGINX: Follow the installation guide for NGINX on your operating system (e.g., using package managers like `apt` or `yum`).
+
+- Step 2: Basic NGINX Configuration
+- Set Up Reverse Proxy: Configure NGINX as a reverse proxy to forward requests to the NestJS application.
+- Test Configuration: Ensure that NGINX is correctly routing requests to your application.
+
+- Step 3: Basic Security Settings
+- Implement Basic Security: Add basic security measures, such as limiting request rates and setting up logging.
+
+- Step 4: Monitoring and Logging
+- Set Up Monitoring: Implement monitoring tools to track NGINX performance and errors.
+
+Day 3-4: JWT-Based Authentication
+
+- Step 1: Install JWT Packages
+- Install Packages: Run `npm install @nestjs/jwt jsonwebtoken` to add JWT support.
+
+- Step 2: Configure JWT
+- Create JWT Module: Set up a JWT module with appropriate settings for token generation and validation.
+- Implement JWT Strategy: Create and configure a JWT strategy for user authentication.
+
+- Step 3: Develop Authentication Endpoints
+- Login Endpoint: Implement a login API that generates a JWT upon successful authentication.
+- Protect Routes: Use `AuthGuard` to protect routes and validate JWT tokens on every request.
+
+- Step 4: Documentation (completed)
+- Document JWT Configuration: Update documentation with details on JWT setup and usage.
+
+Day 5: Multi-Factor Authentication (MFA) with Google Authenticator (completed)
+
+- Step 1: Install MFA Packages
+- Install Packages: Run `npm install speakeasy qrcode` for MFA functionality.
+
+- Step 2: Configure MFA
+- Generate MFA Codes: Use `speakeasy` to generate MFA codes.
+- Generate QR Code: Use `qrcode` to generate a QR code for Google Authenticator.
+
+- Step 3: Develop MFA Endpoints
+- MFA Verification Endpoint: Create an API endpoint to verify MFA codes after initial username/email/password authentication.
+
+- Step 4: Documentation
+- Document MFA Integration: Include MFA setup and usage in your documentation.
+
+Day 6: Account Management (CRUD Operations) (completed)
+
+- Step 1: Implement CRUD Endpoints
+- Create Account: Develop an endpoint for account creation.
+- Register Account: Implement account registration functionality.
+- Update Account: Create an endpoint to update user information.
+- Delete Account: Develop an endpoint to delete user accounts.
+
+- Step 2: Admin Account Management
+- Create Admin Account: Implement functionality to create and manage admin accounts.
+- Secure Admin Creation: Ensure the admin creation process is secure.
+
+- Step 3: Account Verification
+- Send Verification Code: Implement functionality to send verification codes to users' email addresses.
+
+- Step 4: Documentation
+- Document Account Management: Update documentation with details on account management features.
+
+Day 7: API Gateway and gRPC
+
+- Step 1: Set Up API Gateway
+- Configure API Gateway: Use `@nestjs/microservices` to set up an API Gateway for centralized authentication.
+
+- Step 2: Configure gRPC
+- Set Up gRPC: Implement gRPC communication between microservices using Protobuf and HTTP/2.
+- Define Protobuf Files: Create and configure Protobuf files for service definitions.
+
+- Step 3: Documentation
+- Document gRPC Integration: Update documentation with details on gRPC services and methods.
+
+Day 8: Additional Security Features
+
+- Step 1: Implement Account Lockout Mechanism
+- Track Failed Attempts: Implement a mechanism to track failed login attempts.
+- Lock Account: Lock accounts after a specified number of failed attempts.
+- Reset Mechanism: Provide a way to reset accounts or use CAPTCHA verification.
+
+- Step 2: Implement Attribute-Based Access Control (ABAC)
+- Define Attributes: Store user attributes (e.g., role, location) in MongoDB.
+- Set Up Policies: Create policies based on user attributes for route access control.
+- Create Middleware: Develop middleware to check attributes before granting access to sensitive endpoints.
+
+- Step 3: Documentation
+- Document Security Features: Update documentation with details on additional security features.
+
+Day 9: OAuth 2.0 and Session Management
+
+- Step 1: Integrate OAuth 2.0
+- Install Packages: Run `npm install passport @nestjs/passport` to add OAuth support.
+- Configure OAuth Providers: Set up OAuth authentication with providers like Google, Facebook, or GitHub.
+
+- Step 2: Implement Session Management
+- Install Session Management Packages: Run `npm install express-session @nestjs/session` for session handling.
+- Configure Sessions: Implement session management with MongoDB or Redis for storing session data.
+
+- Step 3: Documentation
+- Document OAuth and Sessions: Include OAuth and session management details in your documentation.
+
+Day 10: Advanced NGINX Configuration
+
+- Step 1: SSL/TLS Setup
+- Obtain Certificates: Acquire SSL/TLS certificates from a trusted Certificate Authority (CA).
+- Configure HTTPS: Set up HTTPS in NGINX and NestJS using `httpsOptions`.
+
+- Step 2: Load Balancing and Security
+- Set Up Load Balancing: Configure NGINX for load balancing across multiple backend instances.
+- Implement Additional Security Features: Apply rate limiting and other security measures in NGINX.
+
+- Step 3: Backup and Recovery
+- Implement Backup Mechanisms: Set up regular backups and recovery processes for your application data.
+
+- Step 4: Documentation
+- Document NGINX Configuration: Update documentation with details on advanced NGINX setup.
+
+Day 11: Final Touches, Testing, and Optimization
+
+- Step 1: Conduct Thorough Testing
+- Unit and Integration Tests: Perform comprehensive testing of all components and features.
+- Test NGINX Integration: Ensure proper integration between NGINX and the NestJS application.
+- Security Testing: Conduct security testing including penetration tests and vulnerability assessments.
+
+- Step 2: Optimize Performance and Security
+- Performance Optimization: Analyze and optimize the performance of the application. Consider implementing caching and optimizing database queries.
+- Enhance Security: Review and enhance security measures across the project.
+
+- Step 3: Documentation and Deployment
+- Create Documentation: Write clear documentation for the project, including setup and usage instructions.
+- Deploy Application: Prepare and deploy the application to the production environment.
+

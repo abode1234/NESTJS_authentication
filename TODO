@@ -1,0 +1,82 @@
+v1
+
+################################################################################
+
+secure authentication with nestjs(fastify) and mongodb database,
+       - use grpc(protobuf && http2) protocol to send data between microservices.
+
+1.multi-factor authentication (mfa) with google authenticator
+       - set up google authenticator:
+       - install the `speakeasy` package to generate mfa codes.
+       - use the `qrcode` package to generate a qr code for google authenticator.
+       - create an api endpoint to verify the mfa code after initial username/email/password verification.
+
+2. account management CRUD
+
+       - Create Account;
+       - Register Account;
+       - Update Account Information;
+       - Delete Account;
+       - Create Admin Account;
+       - Secure Admin Creation Process;
+       -verify Account by sending code to email;
+
+3..jwt-based authentication
+       - set up jwt:
+       - install `@nestjs/jwt` and `jsonwebtoken` for handling jwt tokens.
+       - create a login api that generates a jwt after successful user authentication.
+       - protect routes using `authguard` to validate jwt tokens on every request.
+       - add expiration time and refresh token support for additional security.
+
+
+4. ssl/tls encryption
+       - set up ssl/tls:
+       - obtain ssl certificates from a trusted certificate authority (ca).
+       - configure https in nestjs by setting up `httpsoptions` in the `nestfactory.create` method.
+       - force https for all incoming connections using middleware.
+
+5. API Gateway for Microservices Authentication
+       - API Gateway Integration:
+       - Use NestJS with @nestjs/microservices to set up an API Gateway.;
+       - Implement centralized authentication and token validation in the API Gateway before routing requests to microservices.;
+       - Ensure that the API Gateway handles user roles and permissions.;
+       - Configure gRPC (Protobuf & HTTP/2) to send data between microservices.;
+
+6. session management
+       - implement session management:
+       - use `express-session` or `@nestjs/session` to manage user sessions.
+       - store session data in mongodb or redis with session expiration handling.
+       - add secure, httponly, and samesite flags to session cookies for protection.
+
+7. oauth 2.0 authorization
+       - integrate oauth 2.0:
+       - install `passport` and `@nestjs/passport` for oauth authentication.
+       - use oauth providers like google, facebook, or github for user login.
+       - store oauth tokens securely and ensure that token refresh mechanisms are in place.
+
+8. account lockout mechanism
+       - implement account lockout:
+       - track failed login attempts using a counter stored in mongodb.
+       - lock the account after a certain number of failed attempts for a specific time period.
+       - implement a reset mechanism or captcha verification after lockout.
+
+9. attribute-based access control (abac)
+    - implement abac for fine-grained control:
+    - define user attributes (role, location, department, etc.) in mongodb.
+    - set up policies based on attributes to control access to routes and resources.
+    - create middleware to check attributes before granting access to sensitive endpoints.
+
+
+10. Gateway between clients and microservices using nginx and grphql
+    - implement a gateway to connect clients and microservices using nginx and graphql.
+    - use graphql to send data between clients and microservices.
+    - use graphql subscriptions to receive updates from microservices.
+
+
+#######################################################################################
+
+    v2
+
+#######################################################################################
+
+    secure authrization with another service with nestjs and mongodb database
